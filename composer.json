@@ -1,0 +1,37 @@
+{
+    "name": "payment/withdraw-deposit-commission-calculation",
+    "description": "Withdraw and deposit calculation based on different criteria like week, limit and currency",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Payment\\Commission\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "payment\\Commission\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5",
+        "friendsofphp/php-cs-fixer": "2.16"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": [
+            "@phpunit",
+            "@test-cs"
+        ]
+    }
+}
