@@ -8,13 +8,7 @@ use Payment\Commission\Services\APIExchangeRate;
 
 class ExchangeRate
 {
-
     private static $instance;
-
-    private function __construct()
-    {
-        // Private to disabled instantiation.
-    }
 
     public static function getInstance()
     {

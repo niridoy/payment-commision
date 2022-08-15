@@ -6,7 +6,7 @@ namespace Payment\Commission\Abstracts;
 
 use Payment\Commission\Services\ExchangeRate;
 
-abstract class Withdraw 
+abstract class Withdraw
 {
     protected $date;
     protected $identificator;
@@ -25,7 +25,7 @@ abstract class Withdraw
         $this->exchange_rate = ExchangeRate::getInstance();
         $this->setAmount();
     }
-
+ 
     protected function setAmount()
     {
         $this->amount = $this->exchange_rate->getExchangeAmount($this->currency, $this->amount);

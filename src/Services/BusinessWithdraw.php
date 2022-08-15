@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Payment\Commission\Services;
 
-use Payment\Commission\Interfaces\ICommission;
 use Payment\Commission\Abstracts\Withdraw;
+use Payment\Commission\Interfaces\ICommission;
 
 class BusinessWithdraw extends Withdraw implements ICommission
 {

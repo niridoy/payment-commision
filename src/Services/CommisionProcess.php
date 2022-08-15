@@ -14,16 +14,16 @@ class CommisionProcess
         $this->tranactions = $tranactions;
     }
 
-    public function process() : array
+    public function process(): array
     {
         $commissions = [];
-        foreach($this->tranactions as $tranaction) {
-            if( $tranaction[3] == 'deposit') {
+        foreach ($this->tranactions as $tranaction) {
+            if ($tranaction[3] === "deposit") {
                 $deposit = new Deposit($tranaction);
                 $commissions[] = $deposit->getCommissionAmount();
             } else { 
                 $withdraw = new WithdrawProcess();
-                if ($tranaction[2] == 'business') {
+                if ($tranaction[2] === "business") {
                     $commissions[] = $withdraw->process(new BusinessWithdraw($tranaction));
                 } else { 
                     $commissions[] = $withdraw->process(new PrivateWithdraw($tranaction, $this->last_tranactions));

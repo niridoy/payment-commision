@@ -7,9 +7,6 @@ use Payment\Commission\Services\Excel;
 
 $excel = new Excel('input.csv');
 $commission_process = new CommisionProcess($excel->getTranactions());
-
-foreach($commission_process->process() as $commission) {
-    print $commission . PHP_EOL;;
+foreach($commission_process->process() as $commission){
+    echo $commission.PHP_EOL;
 }
-
-// print HOST;
