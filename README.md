@@ -1,11 +1,10 @@
-# Paysera Commission task skeleton
+# Commission task interview test
 
-Following steps:
-- don't forget to change `Paysera` namespace and package name in `composer.json`
- to your own, as `Paysera` keyword should not be used anywhere in your task;
-- `\Paysera\CommissionTask\Service\Math` is an example class provided for the skeleton and could or could not be used by your preference;
-- needed scripts could be found inside `composer.json`;
-- before submitting the task make sure that all the scripts pass (`composer run test` in particular);
-- this file should be updated before submitting the task with the documentation on how to run your program.
+Install Instructions: 
+-1. Pull from GitHub and the repository link is https://github.com/niridoy/payment-commision.
+-2. Update Composer
+-3. Run the scripts.php file through CLI or web server. 
 
-Good luck! :) 
+For testing:
+-1. follow the above instructions then
+-2. run "php vendor/phpunit/phpunit/phpunit" thought php cli
